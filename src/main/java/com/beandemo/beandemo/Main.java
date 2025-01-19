@@ -1,8 +1,12 @@
 package com.beandemo.beandemo;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Main {
     public static void main(String[] args) {
-        Vehicle obj=new Bike();
+        ApplicationContext context=new ClassPathXmlApplicationContext("Spring.xml");
+        Vehicle obj=(Vehicle)context.getBean("vehicle");
         obj.drive();
     }
 }

@@ -1,0 +1,42 @@
+Problem:
+
+1. During a method call if the object calling a method needed to be changed, so in that case changes would be made in main class 
+both left and right part of object declaration which will eventually need stopping the application.
+
+2. To tackle this interface is created which is implemented by classes and during object declaration only right part of declaration
+is changed.
+
+3. Still we need to close the application.
+
+Solution:
+
+1. Dependency injection is the most apt solution for this case.
+
+2. In dependency injection an object is injected in main class rather than creating inside main class.
+
+3. That simply means object is created somewhere else and is used in main class.
+
+4. So suppose many objects are made and are ready to be used in main class, with help of dependency injection, refrence variable 
+will point to that object which will be used inside main class.
+
+5. This will enable us to use various features of an application and in main these features are easily injected making sure application
+is still running.
+
+
+Code steps:
+
+Main.java
+
+1. Create object of ApplicationContext context to invoke method getBean().
+        ApplicationContext context=new ClassPathXmlApplicationContext();
+
+2. getBean object invoked which have parameter "vehicle" which is either pointing to Car object or Bike object.
+        Vehicle obj=(Vehicle)context.getBean("vehicle");
+
+3. Make a application context xml file in resource folderand enter path in point 1.
+        ApplicationContext context=new ClassPathXmlApplicationContext("Spring.xml");
+
+With above 3 steps now no changes need to be made in main class.
+
+All changes will take place inside xml file.
+
