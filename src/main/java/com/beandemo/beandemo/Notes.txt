@@ -44,6 +44,14 @@ With above 3 steps now no changes need to be made in main class.
 
 All changes will take place inside xml file.
 
+In case when we have to give value to a property using bean make changes in xml file.
+
+<bean id="tyre" class="com.beandemo.beandemo.Tyre">
+        <property name="brand" value="CEAT - MRF"></property>
+</bean>
+
+Internally it will use set method to set the value for the property.
+
 Annotation based configuration
 
 1. First make sure to change bean defination to annotation based configuration.
@@ -52,3 +60,4 @@ Annotation based configuration
 
 3. In Spring.xml use this line to make sure beans are available
         <context:component-scan base-package="com.beandemo.beandemo"></context:component-scan>
+
