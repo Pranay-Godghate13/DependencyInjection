@@ -19,6 +19,6 @@ public class Main {
         // System.out.println(s7);
         ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
         Samsung obj=(Samsung)context.getBean("samsung");
-        System.out.println(obj);
+        obj.phoneConfig();
     }
 }

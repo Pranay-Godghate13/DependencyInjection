@@ -77,3 +77,6 @@ AVOIDING USING XML file
 
 5. Then we will invoke getBean object.
         Samsung obj=(Samsung)context.getBean("samsung");
+
+NOTE: Whenever an object is autowired inside a class, the bean method inside AppConfig class set the method and for this getter 
+and setter are needed inside the class where object is injected. 
