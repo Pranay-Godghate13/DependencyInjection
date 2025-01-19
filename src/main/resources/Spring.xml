@@ -9,8 +9,10 @@
 
     <!-- bean definitions here -->
     <!-- <bean id="vehicle" class="com.beandemo.beandemo.Bike"></bean> -->
-    <!-- <context:component-scan base-package="com.beandemo.beandemo"></context:component-scan> -->
-    <bean id="tyre" class="com.beandemo.beandemo.Tyre">
-        <property name="brand" value="CEAT - MRF"></property>
-    </bean>
+    <context:component-scan base-package="com.beandemo.beandemo">
+        
+    </context:component-scan>
+    <!-- <bean id="tyre" class="com.beandemo.beandemo.Tyre"> -->
+         <!-- <property name="brand" value="CEAT - MRF"></property>  -->
+    <!-- </bean>  -->
 </beans>

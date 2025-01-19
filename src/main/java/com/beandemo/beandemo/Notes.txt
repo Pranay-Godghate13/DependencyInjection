@@ -61,3 +61,19 @@ Annotation based configuration
 3. In Spring.xml use this line to make sure beans are available
         <context:component-scan base-package="com.beandemo.beandemo"></context:component-scan>
 
+4. We can inject object in another class by annotating the class as component and injecting it with help of @autowireed keyword.
+
+
+AVOIDING USING XML file
+
+1. We can avoid using xml file and instead of that make a Configurable java file.
+
+2. To make a java file configurable use @Configurable annotation.
+
+3. And we have to make function of class for which we need to inject object off, by using annotation @Bean.
+
+4. In main file ApplicationContext reference variable will point to this object.
+        ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
+
+5. Then we will invoke getBean object.
+        Samsung obj=(Samsung)context.getBean("samsung");
