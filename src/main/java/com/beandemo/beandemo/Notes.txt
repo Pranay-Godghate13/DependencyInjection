@@ -27,6 +27,10 @@ Code steps:
 
 Main.java
 
+ApplicationContext based configuration
+
+First make sure to change bean defination to ApplicationContext based defination.
+
 1. Create object of ApplicationContext context to invoke method getBean().
         ApplicationContext context=new ClassPathXmlApplicationContext();
 
@@ -40,3 +44,11 @@ With above 3 steps now no changes need to be made in main class.
 
 All changes will take place inside xml file.
 
+Annotation based configuration
+
+1. First make sure to change bean defination to annotation based configuration.
+
+2. Annotate the classes Car and Bike with @Component annotation.
+
+3. In Spring.xml use this line to make sure beans are available
+        <context:component-scan base-package="com.beandemo.beandemo"></context:component-scan>
